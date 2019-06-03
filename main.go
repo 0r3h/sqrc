@@ -29,7 +29,7 @@ type response struct {
 
 func main() {
 	if len(os.Args) != 3 {
-		fmt.Println("usage: squadgorcon <ip:port> <password>")
+		fmt.Println("usage: sqrc <ip:port> <password>")
 	} else {
 		address = os.Args[1]
 		password = os.Args[2]
@@ -51,6 +51,7 @@ func connect() {
 		log.Println("ERROR: rcon connecting error: ", err)
 		return
 	}
+	log.Println("INFO: rcon connected")
 }
 
 func commandExecutor(commandResponseBuffer chan response) {
