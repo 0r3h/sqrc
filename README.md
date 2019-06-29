@@ -1,6 +1,6 @@
 # SQRC
 
-Rudimentary Squad RCON CLI. Reads `stdin` for commands, outputs command responses and chat to `stdout`.
+Rudimentary Squad RCON CLI. Reads `stdin` for commands, outputs command responses and chat to `stdout`. Log is outputted to `stderr`.
 
 ## Installation
 
