@@ -88,13 +88,10 @@ func responseDeliverer(chatResponseBuffer chan response, commandResponseBuffer c
 
 		o := response{content, rtype, id, err}
 
-		log.Println("INFO: package received ", content)
-
 		if err != nil {
 			if strings.Contains(err.Error(), "i/o timeout") {
 				continue
 			} else if strings.Contains(err.Error(), "EOF") {
-				log.Println("INFO: rcon reconnecting after timeout")
 				rc.Close()
 				connect()
 				continue
